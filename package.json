@@ -1,12 +1,12 @@
 {
   "name": "ng-debug-tools",
-  "version": "1.0.2",
-    "author": "Janik Kessler",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/JanikKessler/ng-debug-tools.git"
-    },
-    "scripts": {
+  "version": "1.0.3",
+  "author": "Janik Kessler",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JanikKessler/ng-debug-tools.git"
+  },
+  "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
