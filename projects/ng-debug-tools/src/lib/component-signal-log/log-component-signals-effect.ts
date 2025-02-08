@@ -2,7 +2,7 @@ import {computed, EffectRef, isSignal, Signal, WritableSignal} from '@angular/co
 import {logEffect} from '../log-effect/log-effect';
 
 
-export const logComponentSignals = (component: any): EffectRef => {
+export const logComponentSignals = (component: unknown): EffectRef => {
     const signals = findComponentSignals(component);
     const logParamSignal = [...signals.entries()].map(([key, value]) => {
         return computed(() => `${key}: ${value()} \n`)
@@ -12,7 +12,7 @@ export const logComponentSignals = (component: any): EffectRef => {
 }
 
 
-export function findComponentSignals(component: any): Map<string, Signal<unknown> | WritableSignal<unknown>> {
+export function findComponentSignals(component: unknown): Map<string, Signal<unknown> | WritableSignal<unknown>> {
     const propertyNames = Object.getOwnPropertyNames(component);
     const signals = new Map<string, Signal<unknown> | WritableSignal<unknown>>();
 

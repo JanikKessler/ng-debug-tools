@@ -2,11 +2,11 @@
   "name": "ng-debug-tools",
     "version": "1.0.3",
     "peerDependencies": {
-    "@angular/common": "^19.1.0",
-    "@angular/core": "^19.1.0"
+    "@angular/common": "^19.1.5",
+    "@angular/core": "^19.1.5"
   },
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.1"
   },
   "sideEffects": false
 }

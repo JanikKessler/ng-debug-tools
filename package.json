@@ -1,51 +1,53 @@
 {
-  "name": "ng-debug-tools",
-  "version": "1.0.3",
-  "author": "Janik Kessler",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JanikKessler/ng-debug-tools.git"
-  },
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "build:prod": "ng build ng-debug-tools --configuration=production",
-    "lint": "ng lint",
-    "test": "ng test ng-debug-tools",
-    "check:dev": "npm run lint && npm run test",
-    "check:prod": "npm run lint && npm run test",
-    "version:patch": "npm version patch",
-    "version:minor": "npm version minor",
-    "version:major": "npm version major",
-    "publish:patch": "npm run check:prod && npm run build:prod && cd dist/ng-debug-tools && npm version patch && npm publish",
-    "publish:minor": "npm run check:prod && npm run build:prod && cd dist/ng-debug-tools && npm version minor && npm publish",
-    "publish:major": "npm run check:prod && npm run build:prod && cd dist/ng-debug-tools && npm version major && npm publish",
-    "watch": "ng build ng-debug-tools --watch --configuration development"
-  },
-  "dependencies": {
-    "@angular/animations": "^19.0.0",
-    "@angular/common": "^19.0.0",
-    "@angular/compiler": "^19.0.0",
-    "@angular/core": "^19.0.0",
-    "@angular/forms": "^19.0.0",
-    "@angular/platform-browser": "^19.0.0",
-    "@angular/platform-browser-dynamic": "^19.0.0",
-    "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.15.0"
-  },
-  "devDependencies": {
-    "@angular-builders/jest": "^19.0.0",
-    "@angular-devkit/build-angular": "^19.1.5",
-    "@angular/cli": "^19.0.0",
-    "@angular/compiler-cli": "^19.0.0",
-    "@types/jest": "^29.5.14",
-    "angular-eslint": "19.0.2",
-    "eslint": "^9.16.0",
-    "jest": "^29.7.0",
-    "ng-packagr": "^19.1.0",
-    "typescript": "~5.6.2",
-    "typescript-eslint": "8.18.0"
-  }
+    "name": "ng-debug-tools",
+    "version": "1.0.3",
+    "author": "Janik Kessler",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/JanikKessler/ng-debug-tools.git"
+    },
+    "license": "MIT",
+    "scripts": {
+        "ng": "ng",
+        "start": "ng serve",
+        "build": "ng build",
+        "build:prod": "ng build ng-debug-tools --configuration=production",
+        "lint": "ng lint",
+        "test": "ng test ng-debug-tools",
+        "check:dev": "npm run lint && npm run test",
+        "check:prod": "npm run lint && npm run test",
+        "version:patch": "npm version patch",
+        "version:minor": "npm version minor",
+        "version:major": "npm version major",
+        "publish:patch": "npm run check:prod && npm run build:prod && cd dist/ng-debug-tools && npm version patch && npm publish",
+        "publish:minor": "npm run check:prod && npm run build:prod && cd dist/ng-debug-tools && npm version minor && npm publish",
+        "publish:major": "npm run check:prod && npm run build:prod && cd dist/ng-debug-tools && npm version major && npm publish",
+        "watch": "ng build ng-debug-tools --watch --configuration development"
+    },
+    "dependencies": {
+        "@angular/animations": "^19.1.5",
+        "@angular/common": "^19.1.5",
+        "@angular/compiler": "^19.1.5",
+        "@angular/core": "^19.1.5",
+        "@angular/forms": "^19.1.5",
+        "@angular/platform-browser": "^19.1.5",
+        "@angular/platform-browser-dynamic": "^19.1.5",
+        "@angular/router": "^19.1.5",
+        "rxjs": "~7.8.0",
+        "tslib": "^2.3.0",
+        "zone.js": "~0.15.0"
+    },
+    "devDependencies": {
+        "@angular-builders/jest": "^19.0.0",
+        "@angular-devkit/build-angular": "^19.1.6",
+        "@angular/cli": "^19.1.6",
+        "@angular/compiler-cli": "^19.1.5",
+        "@types/jest": "^29.5.14",
+        "angular-eslint": "19.0.2",
+        "eslint": "^9.16.0",
+        "jest": "^29.7.0",
+        "ng-packagr": "^19.1.2",
+        "typescript": "~5.6.2",
+        "typescript-eslint": "8.18.0"
+    }
 }
