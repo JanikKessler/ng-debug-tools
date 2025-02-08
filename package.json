@@ -18,9 +18,9 @@
     "version:patch": "npm version patch",
     "version:minor": "npm version minor",
     "version:major": "npm version major",
-    "publish:patch": "npm run check:prod && npm run build:prod && npm version patch && cd dist/ng-debug-tools && npm publish",
-    "publish:minor": "npm run check:prod && npm run build:prod && npm version minor && cd dist/ng-debug-tools && npm publish",
-    "publish:major": "npm run check:prod && npm run build:prod && npm version major && cd dist/ng-debug-tools && npm publish",
+    "publish:patch": "npm run check:prod && npm run build:prod && cd dist/ng-debug-tools && npm version patch && npm publish",
+    "publish:minor": "npm run check:prod && npm run build:prod && cd dist/ng-debug-tools && npm version minor && npm publish",
+    "publish:major": "npm run check:prod && npm run build:prod && cd dist/ng-debug-tools && npm version major && npm publish",
     "watch": "ng build ng-debug-tools --watch --configuration development"
   },
   "dependencies": {

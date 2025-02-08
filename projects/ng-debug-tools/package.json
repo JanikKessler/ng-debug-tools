@@ -1,6 +1,7 @@
 {
   "name": "ng-debug-tools",
-  "peerDependencies": {
+    "version": "1.0.3",
+    "peerDependencies": {
     "@angular/common": "^19.1.0",
     "@angular/core": "^19.1.0"
   },
