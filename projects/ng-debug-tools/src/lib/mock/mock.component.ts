@@ -1,11 +1,9 @@
 import {Component, inject, signal} from '@angular/core';
 import {logEffect} from '../log-effect/log-effect';
 import {LogLevelToken} from '../log-effect/log-effect.spec';
-import {LogLevelEnum} from '../log-effect/log-level';
 
 @Component({
-  selector: 'lib-mock',
-  imports: [],
+  selector: 'test-mock',
   templateUrl: './mock.component.html',
   styleUrl: './mock.component.css'
 })

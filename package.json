@@ -5,9 +5,18 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "npm run test && npm run build --configuration=production",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "build:prod": "ng build ng-debug-tools --configuration=production",
+    "lint": "ng lint",
+      "test": "ng test ng-debug-tools",
+    "check:dev": "npm run lint && npm run test",
+    "check:prod": "npm run lint && npm run test",
+    "version:patch": "npm version patch",
+    "version:minor": "npm version minor",
+    "version:major": "npm version major",
+    "publish:patch": "npm run check:prod && npm run build:prod && npm version patch && npm publish",
+    "publish:minor": "npm run check:prod && npm run build:prod && npm version minor && npm publish",
+    "publish:major": "npm run check:prod && npm run build:prod && npm version major && npm publish",
+    "watch": "ng build ng-debug-tools --watch --configuration development"
   },
   "private": true,
   "dependencies": {
@@ -28,9 +37,11 @@
     "@angular/cli": "^19.0.0",
     "@angular/compiler-cli": "^19.0.0",
     "@types/jest": "^29.5.14",
+    "angular-eslint": "19.0.2",
+    "eslint": "^9.16.0",
     "jest": "^29.7.0",
-    "karma": "~6.4.0",
     "ng-packagr": "^19.1.0",
-    "typescript": "~5.6.2"
+    "typescript": "~5.6.2",
+    "typescript-eslint": "8.18.0"
   }
 }
