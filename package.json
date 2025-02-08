@@ -18,7 +18,6 @@
     "publish:major": "npm run check:prod && npm run build:prod && npm version major && npm publish",
     "watch": "ng build ng-debug-tools --watch --configuration development"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^19.0.0",
     "@angular/common": "^19.0.0",
