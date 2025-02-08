@@ -1,7 +1,12 @@
 {
   "name": "ng-debug-tools",
   "version": "1.0.2",
-  "scripts": {
+    "author": "Janik Kessler",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/JanikKessler/ng-debug-tools.git"
+    },
+    "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -13,9 +18,9 @@
     "version:patch": "npm version patch",
     "version:minor": "npm version minor",
     "version:major": "npm version major",
-    "publish:patch": "npm run check:prod && npm run build:prod && npm version patch && npm publish",
-    "publish:minor": "npm run check:prod && npm run build:prod && npm version minor && npm publish",
-    "publish:major": "npm run check:prod && npm run build:prod && npm version major && npm publish",
+    "publish:patch": "npm run check:prod && npm run build:prod && npm version patch && cd dist/ng-debug-tools && npm publish",
+    "publish:minor": "npm run check:prod && npm run build:prod && npm version minor && cd dist/ng-debug-tools && npm publish",
+    "publish:major": "npm run check:prod && npm run build:prod && npm version major && cd dist/ng-debug-tools && npm publish",
     "watch": "ng build ng-debug-tools --watch --configuration development"
   },
   "dependencies": {
