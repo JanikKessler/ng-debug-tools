@@ -16,6 +16,7 @@ import {LogLevelEnum} from '../../../../ng-debug-tools/src/lib/log-effect/log-le
 })
 export class LogEffectComponent {
     testSignal = signal<number>(10);
+    testEffectNoPrefix = logEffect(this.testSignal);
     testEffectLog = logEffect('test-effect-log', this.testSignal);
     testEffectWarn = logEffect(LogLevelEnum.WARN, 'test-effect-warn', this.testSignal);
     testEffectInfo = logEffect(LogLevelEnum.INFO, 'test-effect-info', this.testSignal);

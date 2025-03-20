@@ -1,10 +1,10 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MockComponent} from '../mock/mock.component';
 import {LogLevelToken} from '../log-effect/log-effect.spec';
 import {LogLevelEnum} from '../log-effect/log-level';
+import {ComponentSignalLogMockComponent} from '../mock/component-signal-log.mock.component';
 
-let fixture: ComponentFixture<MockComponent>;
-let componentInstance: MockComponent;
+let fixture: ComponentFixture<ComponentSignalLogMockComponent>;
+let componentInstance: ComponentSignalLogMockComponent;
 
 
 describe('Console method tests', () => {
@@ -32,11 +32,11 @@ describe('Console method tests', () => {
 
 function setup(logLevel: string | null = LogLevelEnum.LOG) {
     fixture = TestBed.configureTestingModule({
-        imports: [MockComponent],
+        imports: [ComponentSignalLogMockComponent],
         providers: [
             {provide: LogLevelToken, useValue: logLevel}
         ]
-    }).createComponent(MockComponent);
+    }).createComponent(ComponentSignalLogMockComponent);
     fixture.detectChanges()
     componentInstance = fixture.componentInstance
 
