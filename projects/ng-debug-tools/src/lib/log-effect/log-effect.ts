@@ -8,7 +8,7 @@ export function logEffect(levelOrArg: LogLevel | unknown, ...rest: unknown[]): E
     if (isLogLevel(levelOrArg)) {
         return createLogEffect(levelOrArg, ...rest);
     } else {
-        const params = levelOrArg !== undefined ? [levelOrArg, ...rest] : rest;
+        const params = levelOrArg !== undefined && levelOrArg !== null ? [levelOrArg, ...rest] : rest;
         return createLogEffect(null, ...params);
     }
 }
