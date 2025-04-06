@@ -5,8 +5,6 @@ import {ComponentSignalLogMockComponent} from '../mock/component-signal-log.mock
 import {
     ComponentSignalLogWrongParamTypeMockComponent
 } from '../mock/component-signal-log-wrong-param-type.mock.component';
-import {Type} from '@angular/core';
-import {logComponentSignals} from './log-component-signals-effect';
 
 let fixture: ComponentFixture<ComponentSignalLogMockComponent>;
 let componentInstance: ComponentSignalLogMockComponent;
