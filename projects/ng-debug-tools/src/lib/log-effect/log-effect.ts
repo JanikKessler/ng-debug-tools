@@ -13,6 +13,10 @@ export function logEffect(levelOrArg: LogLevel | unknown, ...rest: unknown[]): E
     }
 }
 
+export function debugLogEffect(...rest: unknown[]): EffectRef {
+        return createLogEffect(LogLevelEnum.DEBUG, ...rest);
+}
+
 
 const createLogEffect = (logLevel: LogLevel | null, ...args: unknown[]) => {
     return effect(() => {

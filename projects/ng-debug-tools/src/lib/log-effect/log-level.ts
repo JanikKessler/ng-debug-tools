@@ -5,7 +5,7 @@ export enum LogLevelEnum {
   ERROR = 'error',
   DEBUG = 'debug'
 }
-export type LogLevel = `${LogLevelEnum}`;
+export type LogLevel = LogLevelEnum;
 
 export const isLogLevel = (value: unknown): value is LogLevel => {
   return typeof value === 'string' &&

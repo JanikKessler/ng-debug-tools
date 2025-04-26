@@ -1,5 +1,5 @@
 import {Component, signal} from '@angular/core';
-import {logEffect} from '../../../../ng-debug-tools/src/lib/log-effect/log-effect';
+import {debugLogEffect, logEffect} from '../../../../ng-debug-tools/src/lib/log-effect/log-effect';
 import {LogLevelEnum} from '../../../../ng-debug-tools/src/lib/log-effect/log-level';
 
 @Component({
@@ -22,6 +22,8 @@ export class LogEffectComponent {
     testEffectInfo = logEffect(LogLevelEnum.INFO, 'test-effect-info', this.testSignal);
     testEffectDebug = logEffect(LogLevelEnum.DEBUG, 'test-effect-debug', this.testSignal);
     testEffectError = logEffect(LogLevelEnum.ERROR, 'test-effect-error', this.testSignal);
+
+    testDebugLogEffect = debugLogEffect('debug-log-effect function',this.testSignal)
 
 
     setRandomTestSignalValue() {
