@@ -1,5 +1,4 @@
-import {Component, inject, signal} from '@angular/core';
-import {LogLevelToken} from '../log-effect/log-effect.spec';
+import {Component} from '@angular/core';
 import {logComponentSignals} from '../component-signal-log/log-component-signals-effect';
 
 @Component({
@@ -11,10 +10,6 @@ import {logComponentSignals} from '../component-signal-log/log-component-signals
     `,
 })
 export class ComponentSignalLogWrongParamTypeMockComponent {
-    logLevel = inject(LogLevelToken)
-    testSignal = signal<number>(5)
-    testSignal2 = signal<number>(5)
-
     effect = logComponentSignals({})
 
 }

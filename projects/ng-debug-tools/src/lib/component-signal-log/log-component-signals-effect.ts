@@ -9,7 +9,7 @@ export const logComponentSignals = (component: object): EffectRef => {
         throw new Error('Provided context is not a angular component');
     }
 
-    const header = ['Logging Signals for Conponent', getComponentName(component)];
+    const header = ['Logging Signals for Component', getComponentName(component)];
     const signals = findComponentSignals(component);
     const logParamSignal = computed(() => `%c${header[0]}: ${header[1]}:%c\n` + [...signals.entries()].reduce((accumulatedString, currSignal) => {
         if (accumulatedString === '') {

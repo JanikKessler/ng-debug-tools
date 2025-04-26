@@ -1,5 +1,4 @@
-import {Component, inject, OnDestroy, signal} from '@angular/core';
-import {LogLevelToken} from '../log-effect/log-effect.spec';
+import {Component, signal} from '@angular/core';
 import {logComponentSignals} from '../component-signal-log/log-component-signals-effect';
 
 @Component({
@@ -10,8 +9,7 @@ import {logComponentSignals} from '../component-signal-log/log-component-signals
     </div>
     `,
 })
-export class ComponentSignalLogMockComponent implements OnDestroy{
-    logLevel = inject(LogLevelToken)
+export class ComponentSignalLogMockComponent {
     testSignal = signal<number>(5)
     testSignal2 = signal<number>(5)
 
@@ -19,9 +17,5 @@ export class ComponentSignalLogMockComponent implements OnDestroy{
 
     changeTestSignal(newVal: number) {
         this.testSignal.set(newVal);
-    }
-
-    ngOnDestroy() {
-        console.log('destruct')
     }
 }

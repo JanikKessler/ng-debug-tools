@@ -20,3 +20,11 @@ export function setUpConsoleSpy(logLevel: LogLevelOptions): SpyInstance{
     }
     return consoleSpy
 }
+
+export function getComponentSignalLogValue(compName: string,signalOneVal: number, signalTwoVal: number){
+    return '%cLogging Signals for Component: ' + compName
+        + ':%c\ntestSignal: '
+        + signalOneVal
+        + '\ntestSignal2: '
+        + signalTwoVal
+}

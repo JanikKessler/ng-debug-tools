@@ -16,7 +16,7 @@ describe('Console method tests', () => {
         jest.resetAllMocks()
     })
 
-    it.each<LogLevelOptions>(logLevelTestParams)('%s logs with %d logs , %d info log,  %d debug logs, %d error logs, %d warn logs',
+    it.each<LogLevelOptions>(logLevelTestParams)('should call console.%s three times',
         (logLevel) => {
         setup(logLevel)
 
