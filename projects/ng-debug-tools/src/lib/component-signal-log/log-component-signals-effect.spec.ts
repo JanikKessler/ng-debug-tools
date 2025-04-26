@@ -5,22 +5,22 @@ import {ComponentSignalLogMockComponent} from '../mock/component-signal-log.mock
 import {
     ComponentSignalLogWrongParamTypeMockComponent
 } from '../mock/component-signal-log-wrong-param-type.mock.component';
+import {LogLevelOptions, logLevelTestParams, setUpConsoleSpy} from '../utils/test-utils';
 
 let fixture: ComponentFixture<ComponentSignalLogMockComponent>;
 let componentInstance: ComponentSignalLogMockComponent;
+let consoleSpy: jest.SpyInstance
 
 
 describe('Console method tests', () => {
-
-    beforeEach(() => {
-        setup()
-    })
 
     afterEach(() => {
         jest.resetAllMocks()
     })
 
-    it('%s logs with %d logs , %d info log,  %d debug logs, %d error logs, %d warn logs', () => {
+    it.each(logLevelTestParams)('%s logs with %d logs , %d info log,  %d debug logs, %d error logs, %d warn logs', (logLevel) => {
+        setup(logLevel)
+
         componentInstance.changeTestSignal(10)
         fixture.detectChanges()
 
@@ -38,8 +38,8 @@ describe('Console method tests', () => {
     });
 });
 
-function setup(logLevel: string | null = LogLevelEnum.LOG) {
-     TestBed.configureTestingModule({
+function setup(logLevel: LogLevelOptions) {
+    TestBed.configureTestingModule({
         imports: [
             ComponentSignalLogMockComponent,
             ComponentSignalLogWrongParamTypeMockComponent
@@ -49,6 +49,7 @@ function setup(logLevel: string | null = LogLevelEnum.LOG) {
         ]
     }).compileComponents();
     fixture = TestBed.createComponent(ComponentSignalLogMockComponent);
+    consoleSpy = setUpConsoleSpy(logLevel)
     fixture.detectChanges()
     componentInstance = fixture.componentInstance
 
